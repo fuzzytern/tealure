@@ -1,8 +1,9 @@
 /*
  * VARIABLES (for future SASS integration)
  * $color-primary: olivedrab
- * $color-title: 
- * $color-article:
+ * $color-primary-inverted: white
+ * $color-title: darkolivegreen
+ * $color-prose: #97B065
  */
 
 * {
@@ -17,7 +18,7 @@
  */
 body {
     line-height: 1.7em;
-    color: #7f8c8d;
+    color: #97B065; /*$color-prose*/
     font-size: 13px;
 }
 
@@ -28,7 +29,7 @@ h4,
 h5,
 h6,
 label {
-    color: #34495e;
+    color: darkolivegreen; /*$color-title*/
 }
 
 .pure-img-responsive {
@@ -76,18 +77,17 @@ label {
  * I want my pure-button elements to look a little different
  */
 .pure-button {
-    background-color: #1f8dd6;
-    color: white;
+    background: olivedrab; /*$color-primary*/
+    color: white; /*$color-primary-inverted*/
     padding: 0.5em 2em;
     border-radius: 5px;
-    margin: 5px 30px;
 }
 
 a.pure-button-primary {
-    background: olivedrab;
-    color: white;
-    border-radius: 5px;
-    font-size: 120%;
+    background: olivedrab; /*$color-primary*/
+    color: white; /*$color-primary-inverted*/
+    padding: 1em 3em;
+    margin: 5px 30px;
 }
 
 /*
@@ -108,27 +108,29 @@ a.pure-button-primary {
     /* Fixed menus normally have a border at the bottom. */
     border-bottom: none;
     /* I need a higher z-index here because of the scroll-over effect. */
-    z-index: 4;
+    /*z-index: 4;*/
 }
 
 .home-menu .pure-menu-heading {
-    color: white;
+    color: white; /*$color-primary-inverted*/
     font-weight: 400;
     font-size: 120%;
 }
 
 .home-menu .pure-menu-selected a {
-    color: white;
+    color: darkolivegreen; /*$color-title*/
 }
 
 .home-menu a {
-    color: #C4D2A7;
+    color: white; /*$color-primary-inverted*/
 }
 .home-menu li a:hover,
 .home-menu li a:focus {
     background: none;
     border: none;
-    color: lightgreen;
+    color: darkolivegreen; /*$color-title*/
+    opacity: .6;
+
 }
 
 
@@ -164,7 +166,7 @@ a.pure-button-primary {
 .splash-head {
     font-size: 20px;
     font-weight: bold;
-    color: olivedrab;
+    color: white; /*$color-primary-inverted*/
     padding: 1em 1.6em;
     font-weight: 100;
     border-radius: 5px;
@@ -173,7 +175,7 @@ a.pure-button-primary {
 
 /* This is the subheading that appears on the blue section */
 .splash-subhead {
-    color: olivedrab;
+    color: white; /*$color-primary-inverted*/
     letter-spacing: 0.05em;
     opacity: 0.8;
 }
@@ -203,12 +205,12 @@ a.pure-button-primary {
 
 /* This is a modifier class used when the content-head is inside a ribbon */
 .content-head-ribbon {
-    color: white;
+    color: white; /*$color-primary-inverted*/ 
 }
 
 /* This is the class used for the content sub-headers (<h3>) */
 .content-subhead {
-    color: #1f8dd6;
+    color: green;
 }
     .content-subhead i {
         margin-right: 7px;
@@ -246,7 +248,7 @@ a.pure-button-primary {
     .home-menu {
         text-align: left;
     }
-        .home-menu ul {
+        .pure-menu-right {
             float: right;
         }
 
