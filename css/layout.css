@@ -72,24 +72,6 @@ a {
 }
 
 /*
- * -- PURE FORM STYLES --
- * Style the form inputs and labels
- */
-.pure-form label {
-    margin: 1em 0 0;
-    font-weight: bold;
-    font-size: 100%;
-}
-
-.pure-form input[type] {
-    border: 2px solid #ddd;
-    box-shadow: none;
-    font-size: 100%;
-    width: 100%;
-    margin-bottom: 1em;
-}
-
-/*
  * -- PURE BUTTON STYLES --
  * I want my pure-button elements to look a little different
  */
@@ -199,13 +181,6 @@ a.pure-button-primary {
  * -- CONTENT STYLES --
  * This represents the content area (everything below the blue section)
  */
-.content {
-  background: url("../img/landscape.jpg");
-  background-size: cover;
-}
-  .content .l-box{
-    background: rgba(255,255,255,.6); /*FIXME: color not referenced*/
-  }
 
 .content-wrapper {
     /* These styles are required for the "scroll-over" effect */
@@ -232,9 +207,28 @@ a.pure-button-primary {
     opacity: .8;
 }
 
-/* This is the class used for the content sub-headers (<h3>) */
+.product {
+  border-right: 1px solid #; /*FIXME no reference*/ 
+  position: relative;
+  opacity: .8;
+}
+.product:hover {
+  opacity: 1;
+}
+.product .product-overlay {
+  position: absolute;
+  bottom: 0;
+  height: 3em;
+  width: 100%;
+  background: rgba(141,186,48,.5);
+}
+.product img {
+  display: block;
+}
+
+/* This is the class used for the content sub-headers  */
 .content-subhead {
-    /*color: red;*/
+
 }
 
 /* This is the class used for the dark-background areas. */
