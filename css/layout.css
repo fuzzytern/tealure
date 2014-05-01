@@ -220,7 +220,7 @@ a.pure-button-primary {
   bottom: 0;
   height: 3em;
   width: 100%;
-  background: rgba(141,186,48,.5);
+  background: rgba(0,0,0,.6);
 }
 .product img {
   display: block;
@@ -228,7 +228,7 @@ a.pure-button-primary {
 
 /* This is the class used for the content sub-headers  */
 .content-subhead {
-
+  padding: 0 2em;
 }
 
 /* This is the class used for the dark-background areas. */
@@ -239,6 +239,15 @@ a.pure-button-primary {
 /* This is the class used for the footer */
 .footer {
     background: #111; /*$color-title*/
+}
+.footer a {
+  color: #333;
+}
+.footer ul {
+  list-style-type: none;
+}
+.footer i:hover {
+  color: white; /*$color-primary-inverted*/
 }
 
 /*
