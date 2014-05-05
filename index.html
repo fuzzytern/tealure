@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<div class="header">
+<div class="header" ng-controller="MenuController">
     <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
         <a class="pure-menu-heading" href="">Tealure</a>
 
@@ -42,7 +42,7 @@
 </div>
 
 <div class="content-wrapper">
-    <div class="content">
+    <div class="content" ng-controller="ProductsController">
         <h2 class="content-head is-center">A unique taste from Ilam District, Nepal.</h2>
         <p class="content-subhead is-center">Selected from family-owned small scale plantations, this tea is delivered straight to your home to guarantee utmost quality.</p>
         <div class="pure-g">
