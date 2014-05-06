@@ -1,1 +1,7 @@
 *Session.vim
+*.log
+!.gitkeep
+package.json
+node_modules/
+app/js/components/
+tmp
