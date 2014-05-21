@@ -12,6 +12,10 @@ angular.module('frontpage.controllers', [])
     ];
   }])
   .controller('ProductsController', ['$scope', function($scope) {
+    /*
+     * TODO - Add the following attributes
+     * Name, steeping time, description, price...
+     */
     $scope.products = [
       { slug:"silver-tips" },
       { slug:"spring-white" },
