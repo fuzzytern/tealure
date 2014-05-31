@@ -33,6 +33,18 @@ html, button, input, select, textarea,
     font-family: "Maven Pro", serif;
 }
 
+.splash-head, h1 {
+  font-family: "Dancing Script", serif;
+}
+
+header{
+  margin: 1em 1em 1.5em;
+}
+header > * {
+  margin: 0;
+  padding: 0;
+}
+
 h1,
 h2,
 h3,
@@ -79,7 +91,6 @@ a {
   background: #8DBA30; /*$color-primary*/
   color: white; /*$color-primary-inverted*/
   padding: 0.5em 2em;
-  border-radius: 6px;
 }
 
 a.pure-button-primary {
@@ -87,9 +98,8 @@ a.pure-button-primary {
   border: 3px solid white;
   color: white; /*$color-primary-inverted*/
   letter-spacing: 0.05em;
-  font-weight: bold;
-  padding: 0.5em 2em;
-  margin: 5px 30px;
+  padding: 0.5em 3em;
+  margin: .5em 2em;
   transition:  .3s ease;
 }
 a.pure-button-primary:hover {
@@ -162,13 +172,12 @@ a.pure-button-primary:hover {
     height: 50%;
     margin: auto;
     position: absolute;
-    top: 100px; left: 0; bottom: 0; right: 0;
+    top: 0px; left: 0; bottom: 0; right: 0;
     text-align: center;
 }
 
 /* This is the main heading that appears on the blue section */
 .splash-head {
-    font-family: "Dancing Script", serif;
     font-size: 24px;
     font-weight: bold;
     color: white; /*$color-primary-inverted*/
@@ -215,12 +224,25 @@ a.pure-button-primary:hover {
     opacity: .8;
 }
 
+.content {
+  background: #ddd;
+}
 .product {
 }
 .product img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+.product-info {
+  border-left: 1px solid #ccc; /*FIXME color not referenced*/
+}
+.product-info h1 {
+  font-size: 3em;
+  color: rgba(0,0,0,.7);
+}
+.product-info h2 {
+  color: rgba(0,0,0,.7);
 }
 
 /* This is the class used for the content sub-headers  */
