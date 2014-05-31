@@ -59,16 +59,16 @@ a {
  * These are some useful classes which I will need
  */
 .l-box {
-    padding: 1em;
+  padding: 1em;
 }
 
 .l-box-lg {
-    padding: 2em;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding: 2em;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .is-center {
-    text-align: center;
+  text-align: center;
 }
 
 /*
@@ -76,19 +76,26 @@ a {
  * I want my pure-button elements to look a little different
  */
 .pure-button {
-    background: #8DBA30; /*$color-primary*/
-    color: white; /*$color-primary-inverted*/
-    padding: 0.5em 2em;
-    border-radius: 5px;
+  background: #8DBA30; /*$color-primary*/
+  color: white; /*$color-primary-inverted*/
+  padding: 0.5em 2em;
+  border-radius: 6px;
 }
 
 a.pure-button-primary {
-    background: #8DBA30; /*$color-primary*/
-    color: white; /*$color-primary-inverted*/
-    letter-spacing: 0.05em;
-    font-weight: bold;
-    padding: 0.5em 2em;
-    margin: 5px 30px;
+  background: none;
+  border: 3px solid white;
+  color: white; /*$color-primary-inverted*/
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  padding: 0.5em 2em;
+  margin: 5px 30px;
+  transition:  .3s ease;
+}
+a.pure-button-primary:hover {
+  background-image: none;
+  background-color: white;
+  color: black; /*$color-primary-inverted*/
 }
 
 /*
@@ -97,14 +104,14 @@ a.pure-button-primary {
  */
 
 .home-menu {
-    padding: 0.5em;
-    letter-spacing: 0.05em;
-    text-align: center;
-    /*box-shadow: 0 2px 1px rgba(0,0,0, 0.10);*/
+  padding: 0.5em;
+  letter-spacing: 0.05em;
+  text-align: center;
+  /*box-shadow: 0 2px 1px rgba(0,0,0, 0.10);*/
 }
 .home-menu.pure-menu-open {
-    /*background: #8DBA30;*/
-    background: none;
+  /*background: #8DBA30;*/
+  background: none;
 }
 .pure-menu.pure-menu-open.pure-menu-fixed {
     /* Fixed menus normally have a border at the bottom. */
@@ -137,12 +144,13 @@ a.pure-button-primary {
  */
 
 .splash-container {
-    background: url("../img/cupandtea.jpg") no-repeat;
+    background: url("../img/ladybug.jpg") no-repeat center;
+    background-size:cover;
     z-index: 1;
     overflow: hidden;
     /* The following styles are required for the "scroll-over" effect */
     width: 100%;
-    height: 88%;
+    height: 98%;
     top: 0;
     left: 0;
     position: fixed !important;
@@ -185,7 +193,7 @@ a.pure-button-primary {
 .content-wrapper {
     /* These styles are required for the "scroll-over" effect */
     position: absolute;
-    top: 84%;
+    top: 90%;
     width: 100%;
     min-height: 12%;
     z-index: 2;
@@ -208,21 +216,10 @@ a.pure-button-primary {
 }
 
 .product {
-  border-right: 1px solid #; /*FIXME no reference*/ 
-  position: relative;
-  opacity: .8;
-}
-.product:hover {
-  opacity: 1;
-}
-.product .product-overlay {
-  position: absolute;
-  bottom: 0;
-  height: 3em;
-  width: 100%;
-  background: rgba(0,0,0,.6);
 }
 .product img {
+  max-width: 100%;
+  height: auto;
   display: block;
 }
 
