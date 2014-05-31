@@ -1,1 +1,1 @@
-exclude: app/assets/components
+exclude: [app/assets/components/fontawesome/src]
