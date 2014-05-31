@@ -36,11 +36,18 @@
 
 <div class="content-wrapper">
     <div class="content" ng-controller="ProductsController">
-        <h2 class="content-head is-center">A unique taste from Ilam District, Nepal.</h2>
-        <p class="content-subhead is-center">Selected from family-owned small scale plantations, this tea is delivered straight to your home to guarantee utmost quality.</p>
-        <div class="pure-g">
-          <div ng-include='"/app/views/partials/products.html"'></div>
+      <h2 class="content-head is-center">A unique taste from Ilam District, Nepal.</h2>
+
+      <div class="pure-g is-center">
+        <div class="product-container pure-u-1-5">
+          <h2>Teas</h2>
+          <div ng-include='"/app/views/partials/teas.html"'></div>
         </div>
+        <div class="product-container pure-u-1-5">
+          <h2>Teas</h2>
+          <div ng-include='"/app/views/partials/accessories.html"'></div>
+        </div>
+      </div>
     </div>
 
     <div class="ribbon l-box-lg">
