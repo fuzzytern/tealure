@@ -17,11 +17,11 @@ angular.module('frontpage.controllers', [])
      * Name, steeping time, description, price...
      */
     $scope.products = [
-      { slug:"silver-tips" },
-      { slug:"spring-white" },
-      { slug:"black-ruby" },
-      { slug:"himalayan-emerald" },
-      { slug:"himalayan-gold" },
-      { slug:"himalayan-oolong" }
+      { name:"Silver Tips", slug:"silver-tips" },
+      { name:"Spring White", slug:"spring-white" },
+      { name:"Black Ruby", slug:"black-ruby" },
+      { name:"Himalayan Emerald", slug:"himalayan-emerald" },
+      { name:"Himalayan Gold", slug:"himalayan-gold" },
+      { name:"Himalayan Oolong", slug:"himalayan-oolong" }
     ];
   }]);

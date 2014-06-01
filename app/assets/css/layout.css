@@ -33,7 +33,7 @@ html, button, input, select, textarea,
     font-family: "Maven Pro", serif;
 }
 
-.splash-head, h1 {
+.splash-head, h1, h2 {
   font-family: "Dancing Script", serif;
 }
 
@@ -56,11 +56,14 @@ label {
 }
 
 a {
-    color: #111; /*$color-title*/
-    font-weight: bold;
-    text-decoration: none;
+  font-weight: normal;
+  color: #666; /*FIXME unreferenced color*/
+  text-decoration: none;
 }
-
+a:hover, a:focus {
+  color: #111; /*$color-title*/
+  text-decoration: none;
+}
 .pure-img-responsive {
     max-width: 100%;
     height: auto;
@@ -95,17 +98,17 @@ a {
 
 a.pure-button-primary {
   background: none;
-  border: 3px solid white;
+  border: 2px solid white;
   color: white; /*$color-primary-inverted*/
   letter-spacing: 0.05em;
-  padding: 0.5em 3em;
-  margin: .5em 2em;
+  padding: 0.5em 2.5em;
+  margin: .4em 1.5em;
   transition:  .3s ease;
 }
 a.pure-button-primary:hover {
   background-image: none;
   background-color: white;
-  color: black; /*$color-primary-inverted*/
+  color: #333; /*$color-prose*/
 }
 
 /*
@@ -117,14 +120,27 @@ a.pure-button-primary:hover {
   padding: 0.5em;
   letter-spacing: 0.05em;
   text-align: center;
-  /*box-shadow: 0 2px 1px rgba(0,0,0, 0.10);*/
+}
+.home-menu a {
+    color: white; /*$color-primary-inverted*/
+    font-size: 70%;
+    font-weight: bold;
+    opacity: .8;
+    transition: .3s ease;
+    background: none; /* FIXME: erasing Pure's style */
+    border: none; /* FIXME: erasing Pure's style */
+}
+.home-menu li a:hover,
+.home-menu li a:focus {
+    color: white; /*$color-title*/
+    opacity: 1;
+    background: none; /* FIXME: erasing Pure's style */
+    border: none; /* FIXME: erasing Pure's style */
 }
 .home-menu.pure-menu-open {
-  /*background: #8DBA30;*/
   background: none;
 }
 .pure-menu.pure-menu-open.pure-menu-fixed {
-    /* Fixed menus normally have a border at the bottom. */
     border-bottom: none;
 }
 
@@ -136,16 +152,6 @@ a.pure-button-primary:hover {
     font-size: 120%;
 }
 
-.home-menu a {
-    color: white; /*$color-primary-inverted*/
-    font-size: 70%;
-}
-.home-menu li a:hover,
-.home-menu li a:focus {
-    background: none;
-    border: none;
-    color: #111; /*$color-title*/
-}
 
 
 /*
@@ -178,16 +184,17 @@ a.pure-button-primary:hover {
 
 /* This is the main heading that appears on the blue section */
 .splash-head {
-    font-size: 24px;
+    font-size: 42px;
     font-weight: bold;
     color: white; /*$color-primary-inverted*/
     font-weight: 700;
-    border-radius: 5px;
     line-height: 1em;
 }
 
 /* This is the subheading that appears on the blue section */
 .splash-subhead {
+    font-family: "Maven Pro", serif;
+    font-size: 16px;
     color: white; /*$color-primary-inverted*/
     letter-spacing: 0.05em;
     font-weight: bold;
@@ -212,7 +219,8 @@ a.pure-button-primary:hover {
 
 /* This is the class used for the main content headers (<h2>) */
 .content-head {
-  font-weight:100;
+  font-size: 2.2em;
+  margin: 5px 0;
 }
 
 /* This is a modifier class used when the content-head is inside a ribbon */
@@ -228,14 +236,27 @@ a.pure-button-primary:hover {
   background: #ddd;
 }
 .product {
+  transition: .6s ease;
+}
+.product p {
+  margin: -15px 0 5px;
+  padding: 0;
+  font-size: 80%;
 }
 .product img {
   max-width: 100%;
   height: auto;
   display: block;
 }
-.product-info {
-  border-left: 1px solid #ccc; /*FIXME color not referenced*/
+.product.active, .product:hover {
+  box-shadow: 0px 0px 2px #444;
+  background: #eee;
+}
+  .product.active p {
+    font-weight: bold;
+  }
+.product-container {
+  border-right: 1px solid #ccc; /*FIXME color not referenced*/
 }
 .product-info h1 {
   font-size: 3em;
@@ -286,9 +307,6 @@ a.pure-button-primary:hover {
     .home-menu {
         text-align: left;
     }
-        .pure-menu-right {
-            float: right;
-        }
 
     /* We increase the height of the splash-container */
 /*    .splash-container {
@@ -303,7 +321,10 @@ a.pure-button-primary:hover {
     }
 
     .splash-head {
-        font-size: 250%;
+        font-size: 72px;
+    }
+    .splash-subhead {
+        font-size: 20px;
     }
 
 
@@ -322,6 +343,9 @@ a.pure-button-primary:hover {
 @media (min-width: 78em) {
     /* We increase the header font size even more */
     .splash-head {
-        font-size: 300%;
+        font-size: 96px;
+    }
+    .splash-subhead {
+        font-size: 24px;
     }
 }

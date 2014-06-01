@@ -14,7 +14,7 @@
 <body>
 <div class="header" ng-controller="MenuController">
     <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
-        <a class="pure-menu-heading" href="">Tealure</a>
+        <div class="pure-menu-heading" href="">Tealure</div>
 
         <ul>
           <li ng-repeat="entry in entries"><a href="{{ entry.link }}">{{ entry.text }}</a></li>
@@ -24,7 +24,10 @@
 
 <div class="splash-container">
     <div class="splash">
-      <h1 class="splash-head">Authenticitea <br /> from Ilam District, Nepal</h1>
+        <header>
+          <h1 class="splash-head">Authenticitea</h1>
+          <h1 class="splash-subhead">from Ilam District, Nepal</h1>
+        </header>
         <p class="splash-subhead">
         </p>
         <p>
@@ -35,17 +38,20 @@
 </div>
 
 <div class="content-wrapper">
-    <div class="l-box-lg" ng-controller="ProductsController">
+    <div class="" ng-controller="ProductsController">
 
       <div class="pure-g">
-        <div class="product-container pure-u-3-5">
+        <div class="product-container l-box pure-u-1-2">
           <div ng-include='"views/partials/teas.html"'></div>
         </div>
-        <div class="product-info l-box pure-u-2-5">
-          <header>
-            <h1 class="is-center">Authenticitea</h1>
-            <p class="is-center">from Ilam District, Nepal</p>
-          </header>
+        <div class="product-info is-center l-box pure-u-1-2">
+          <h2 class="content-head">Discover</h2>
+          <p>
+            Selected from family-owned small scale plantations, our tea is delivered straight to your home to guarantee utmost quality. 
+          </p>
+          <p>
+            Pick a tea from the selection to discover more about it.
+          </p>
         </div>
       </div>
     </div>
