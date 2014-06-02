@@ -1,6 +1,48 @@
+<!-- FIXME Get this ngRepeat loop to deactivate tabs when another is activated
+  div class="pure-g">
+    <div class='product pure-u-1-2' ng-class='{active: main.active.tab == "product.slug"}' ng-repeat="product in products">
+      <a href="" ng-click='main.active.tab = "product.slug"'>
+        <img src="assets/img/products/{{ product.slug }}.png" />
+        <p class="is-center">{{ product.name }}</p>
+      </a>
+    </div>
+  </div-->
+
   <div class="pure-g">
-    <div class="product pure-u-1-2" ng-repeat="product in products">
-      <img src="assets/img/products/{{ product.slug }}.png" />
-      <p class="is-center">{{ product.name }}</p>
+    <div class='product pure-u-1-2' ng-class='{active: main.active.tab == "silver-tips"}'>
+      <a href="" ng-click='main.active.tab = "silver-tips"'>
+        <img src="assets/img/products/silver-tips.png" />
+        <p class="is-center">Silver Tips</p>
+      </a>
+    </div>
+    <div class='product pure-u-1-2' ng-class='{active: main.active.tab == "spring-white"}'>
+     <a href="" ng-click='main.active.tab = "spring-white"'>
+        <img src="assets/img/products/spring-white.png" />
+        <p class="is-center">Spring White</p>
+      </a>
+    </div>
+    <div class='product pure-u-1-2' ng-class='{active: main.active.tab == "black-ruby"}'>
+      <a href="" ng-click='main.active.tab = "black-ruby"'>
+        <img src="assets/img/products/black-ruby.png" />
+        <p class="is-center">Black Ruby</p>
+      </a>
+    </div>
+    <div class='product pure-u-1-2' ng-class='{active: main.active.tab == "himalayan-emerald"}'>
+     <a href="" ng-click='main.active.tab = "himalayan-emerald"'>
+        <img src="assets/img/products/himalayan-emerald.png" />
+        <p class="is-center">Himalayan Emerald</p>
+      </a>
+    </div>
+    <div class='product pure-u-1-2' ng-class='{active: main.active.tab == "himalayan-gold"}'>
+     <a href="" ng-click='main.active.tab = "himalayan-gold"'>
+        <img src="assets/img/products/himalayan-gold.png" />
+        <p class="is-center">Himalayan Gold</p>
+      </a>
+    </div>
+    <div class='product pure-u-1-2' ng-class='{active: main.active.tab == "himalayan-oolong"}'>
+     <a href="" ng-click='main.active.tab = "himalayan-oolong"'>
+        <img src="assets/img/products/himalayan-oolong.png" />
+        <p class="is-center">Himalayan Oolong</p>
+      </a>
     </div>
   </div>

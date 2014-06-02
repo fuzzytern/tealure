@@ -236,7 +236,7 @@ a.pure-button-primary:hover {
   background: #ddd;
 }
 .product {
-  transition: .6s ease;
+  transition: .5s ease;
 }
 .product p {
   margin: -15px 0 5px;
@@ -248,12 +248,13 @@ a.pure-button-primary:hover {
   height: auto;
   display: block;
 }
-.product.active, .product:hover {
+.product.active {
   box-shadow: 0px 0px 2px #444;
   background: #eee;
 }
-  .product.active p {
-    font-weight: bold;
+  .product a {
+    outline: none;
+    transition: .5s ease;
   }
 .product-container {
   border-right: 1px solid #ccc; /*FIXME color not referenced*/
