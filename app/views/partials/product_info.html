@@ -1,0 +1,18 @@
+<h2 class="content-head">{{ selected.name }}</h2>
+
+<p>White tea with a mild honney flavour.</p>
+<p>
+  <select id="packaging" ng-model="selected.current_option" ng-options="option.description for option in selected.options"></select>
+<ul class="pure-menu-horizontal">
+  <li><i class="fa fa-leaf fa-lg"></i> White tea</li>
+  <li><i class="fa fa-clock-o fa-lg"></i> steep it 4 to 5 minutes </li>
+  <li><i class="fa fa-refresh fa-lg"></i> Resteep up to 10 times</li>
+</ul>
+<p>
+<span class="price"></span>DKK
+</p>
+
+<a class="pure-button" href="#">
+  <i class="fa fa-shopping-cart fa-lg"></i>
+  Add this to my shopping cart
+</a>

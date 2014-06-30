@@ -256,8 +256,8 @@ a.pure-button-primary:hover {
     outline: none;
     transition: .5s ease;
   }
-.product-container {
-  border-right: 1px solid #ccc; /*FIXME color not referenced*/
+.product-info { /* FIXME For the sake of demo only */
+  margin-top: 20px;
 }
 .product-info h1 {
   font-size: 3em;
@@ -265,6 +265,15 @@ a.pure-button-primary:hover {
 }
 .product-info h2 {
   color: rgba(0,0,0,.7);
+}
+.product-info .pure-menu-horizontal li {
+  margin-right: 10px; 
+}
+.product-info .pure-button {
+  width: 70%;
+}
+.product-info .price {
+  font-size: 3em;
 }
 
 /* This is the class used for the content sub-headers  */

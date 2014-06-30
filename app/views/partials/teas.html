@@ -1,14 +1,13 @@
-<!-- FIXME Get this ngRepeat loop to deactivate tabs when another is activated
-  div class="pure-g">
+<div class="pure-g">
     <div class='product pure-u-1-2' ng-class='{active: main.active.tab == "product.slug"}' ng-repeat="product in products">
-      <a href="" ng-click='main.active.tab = "product.slug"'>
+      <a href="" ng-click='select(product)'>
         <img src="assets/img/products/{{ product.slug }}.png" />
         <p class="is-center">{{ product.name }}</p>
       </a>
     </div>
-  </div-->
+  </div>
 
-  <div class="pure-g">
+  <!--div class="pure-g">
     <div class='product pure-u-1-2' ng-class='{active: main.active.tab == "silver-tips"}'>
       <a href="" ng-click='main.active.tab = "silver-tips"'>
         <img src="assets/img/products/silver-tips.png" />
@@ -44,5 +43,5 @@
         <img src="assets/img/products/himalayan-oolong.png" />
         <p class="is-center">Himalayan Oolong</p>
       </a>
-    </div>
+    </div-->
   </div>

@@ -17,11 +17,41 @@ angular.module('frontpage.controllers', [])
      * Name, steeping time, description, price...
      */
     $scope.products = [
-      { name:"Silver Tips", slug:"silver-tips" },
-      { name:"Spring White", slug:"spring-white" },
-      { name:"Black Ruby", slug:"black-ruby" },
-      { name:"Himalayan Emerald", slug:"himalayan-emerald" },
-      { name:"Himalayan Gold", slug:"himalayan-gold" },
-      { name:"Himalayan Oolong", slug:"himalayan-oolong" }
+      { name:"Silver Tips", slug:"silver-tips", options: [
+        {description: "50g Lokta Box", price: "99.00" },
+        {description: "40g Red Bamboo", price: "99.00"},
+        {description: "40g Black Bamboo", price: "99.00"}], current_option: ""
+      },
+      { name:"Spring White", slug:"spring-white", options: [
+        {description: "50g Lokta Box", price: "99.00" },
+        {description: "40g Red Bamboo", price: "99.00"},
+        {description: "40g Black Bamboo", price: "99.00"}], current_option: ""
+      },
+      { name:"Black Ruby", slug:"black-ruby", options: [
+        {description: "50g Lokta Box", price: "99.00" },
+        {description: "40g Red Bamboo", price: "99.00"},
+        {description: "40g Black Bamboo", price: "99.00"}], current_option: ""
+      },
+      { name:"Himalayan Emerald", slug:"himalayan-emerald", options: [
+        {description: "50g Lokta Box", price: "99.00" },
+        {description: "40g Red Bamboo", price: "99.00"},
+        {description: "40g Black Bamboo", price: "99.00"}], current_option: ""
+      },
+      { name:"Himalayan Gold", slug:"himalayan-gold", options: [
+        {description: "50g Lokta Box", price: "99.00" },
+        {description: "40g Red Bamboo", price: "99.00"},
+        {description: "40g Black Bamboo", price: "99.00"}], current_option: ""
+      },
+      { name:"Himalayan Oolong", slug:"himalayan-oolong", options: [
+        {description: "50g Lokta Box", price: "99.00" },
+        {description: "40g Red Bamboo", price: "99.00"},
+        {description: "40g Black Bamboo", price: "99.00"}], current_option: ""
+      }
     ];
+    
+
+    /* Methods */
+    $scope.select = function(product){
+      $scope.selected = product;
+    };
   }]);
