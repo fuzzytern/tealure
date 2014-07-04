@@ -18,14 +18,14 @@ angular.module('frontpage.controllers', [])
      */
     $scope.products = [
       { name:"Silver Tips", slug:"silver-tips", options: [
-        {description: "50g Lokta Box", price: "99.00" },
-        {description: "40g Red Bamboo", price: "99.00"},
-        {description: "40g Black Bamboo", price: "99.00"}], current_option: ""
+        {description: "50g Lokta Box", price: "99" },
+        {description: "40g Red Bamboo", price: "9.00"},
+        {description: "40g Black Bamboo", price: "99.0"}], current_option: ""
       },
       { name:"Spring White", slug:"spring-white", options: [
-        {description: "50g Lokta Box", price: "99.00" },
-        {description: "40g Red Bamboo", price: "99.00"},
-        {description: "40g Black Bamboo", price: "99.00"}], current_option: ""
+        {description: "50g Lokta Box", price: "99.0" },
+        {description: "40g Red Bamboo", price: "9.00"},
+        {description: "40g Black Bamboo", price: "9"}], current_option: ""
       },
       { name:"Black Ruby", slug:"black-ruby", options: [
         {description: "50g Lokta Box", price: "99.00" },
