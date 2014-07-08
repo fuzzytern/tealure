@@ -7,16 +7,11 @@ describe('my app', function() {
   browser.get('index.html');
 
 
-
   beforeEach(function() {
-    browser.get('index.html#/view1');
+    browser.get('index.html');
   });
 
-
-  it('should render view1 when user navigates to /view1', function() {
-    expect(element.all(by.css('[ng-view] p')).first().getText()).
-      toMatch(/partial for view 1/);
-  });
+  /* Load tests */
 
 
   describe('view2', function() {
