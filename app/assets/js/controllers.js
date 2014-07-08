@@ -18,33 +18,33 @@ angular.module('frontpage.controllers', [])
      */
     $scope.products = [
       { name:"Silver Tips", slug:"silver-tips", options: [
-        {description: "50g Lokta Box", price: "99" },
-        {description: "40g Red Bamboo", price: "9.00"},
-        {description: "40g Black Bamboo", price: "99.0"}], current_option: ""
+        {description: "50g Lokta Box", price: "99.00" },
+        {description: "40g Red Bamboo", price: "59.00"},
+        {description: "40g Black Bamboo", price: "29.00"}], current_option: ""
       },
       { name:"Spring White", slug:"spring-white", options: [
-        {description: "50g Lokta Box", price: "99.0" },
-        {description: "40g Red Bamboo", price: "9.00"},
-        {description: "40g Black Bamboo", price: "9"}], current_option: ""
+        {description: "50g Lokta Box", price: "49.90" },
+        {description: "40g Red Bamboo", price: "90.00"},
+        {description: "40g Black Bamboo", price: "89.89"}], current_option: ""
       },
       { name:"Black Ruby", slug:"black-ruby", options: [
-        {description: "50g Lokta Box", price: "99.00" },
-        {description: "40g Red Bamboo", price: "99.00"},
-        {description: "40g Black Bamboo", price: "99.00"}], current_option: ""
+        {description: "50g Lokta Box", price: "29.00" },
+        {description: "40g Red Bamboo", price: "19.00"},
+        {description: "40g Black Bamboo", price: "89.00"}], current_option: ""
       },
       { name:"Himalayan Emerald", slug:"himalayan-emerald", options: [
         {description: "50g Lokta Box", price: "99.00" },
-        {description: "40g Red Bamboo", price: "99.00"},
-        {description: "40g Black Bamboo", price: "99.00"}], current_option: ""
+        {description: "40g Red Bamboo", price: "79.00"},
+        {description: "40g Black Bamboo", price: "79.00"}], current_option: ""
       },
       { name:"Himalayan Gold", slug:"himalayan-gold", options: [
         {description: "50g Lokta Box", price: "99.00" },
-        {description: "40g Red Bamboo", price: "99.00"},
+        {description: "40g Red Bamboo", price: "79.00"},
         {description: "40g Black Bamboo", price: "99.00"}], current_option: ""
       },
       { name:"Himalayan Oolong", slug:"himalayan-oolong", options: [
         {description: "50g Lokta Box", price: "99.00" },
-        {description: "40g Red Bamboo", price: "99.00"},
+        {description: "40g Red Bamboo", price: "19.00"},
         {description: "40g Black Bamboo", price: "99.00"}], current_option: ""
       }
     ];
@@ -53,5 +53,11 @@ angular.module('frontpage.controllers', [])
     /* Methods */
     $scope.select = function(product){
       $scope.selected = product;
+      $scope.selected.current_option = $scope.selected.options[0]
+    };
+
+    /* Debug */
+    $scope.isSelected = function() {
+      return angular.isDefined($scope.selected);
     };
   }]);

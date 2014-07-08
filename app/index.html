@@ -45,7 +45,16 @@
           <div ng-include='"views/partials/teas.html"'></div>
         </div>
         <div class="product-info is-center l-box pure-u-1-2">
-          <product-info />
+          <div ng-if="isSelected() === false">
+            <h3>Discover</h3>
+            <p>
+              Selected from family-owned small scale plantations, our tea is delivered straight to your home to guarantee utmost quality.
+            </p>
+            <p>
+              Pick a tea from the selection to discover more about it. 
+            </p>
+          </div>
+          <div ng-if="isSelected()"><product-info /></div>
         </div>
       </div>
     </div>
