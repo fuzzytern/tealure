@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Maven+Pro|Dancing+Script:400,700);
+@import url(http://fonts.googleapis.com/css?family=Maven+Pro|Cabin+Sketch:400,400);
 /*
  * VARIABLES (for future SASS integration)
  * $color-primary: #8DBA30
@@ -34,7 +34,7 @@ html, button, input, select, textarea,
 }
 
 .splash-head, h1, h2 {
-  font-family: "Dancing Script", serif;
+  font-family: "Cabin Sketch", serif;
 }
 
 header{
@@ -93,7 +93,7 @@ a:hover, a:focus {
 .pure-button {
   background: #8DBA30; /*$color-primary*/
   color: white; /*$color-primary-inverted*/
-  padding: 0.5em 2em;
+  padding: 0.5em 1em;
 }
 
 a.pure-button-primary {
@@ -147,9 +147,7 @@ a.pure-button-primary:hover {
 .home-menu .pure-menu-heading {
     text-transform: none;
     color: white; /*$color-primary-inverted*/
-    font-weight: 700;
-    font-family: "Dancing Script", serif;
-    font-size: 120%;
+    font-family: "Cabin Sketch", serif;
 }
 
 
@@ -184,10 +182,8 @@ a.pure-button-primary:hover {
 
 /* This is the main heading that appears on the blue section */
 .splash-head {
-    font-size: 42px;
-    font-weight: bold;
+    font-size: 24px;
     color: white; /*$color-primary-inverted*/
-    font-weight: 700;
     line-height: 1em;
 }
 
@@ -237,25 +233,28 @@ a.pure-button-primary:hover {
 }
 .product {
   transition: .5s ease;
-}
-.product p {
-  margin: -5px 0 5px;
-  line-height: 15px;
-  padding: 0;
-  font-size: 80%;
-}
-.product img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-.product.active {
-  box-shadow: 0px 0px 2px #444;
-  background: #eee;
+  opacity: .6;
 }
   .product a {
     outline: none;
     transition: .5s ease;
+  }
+  .product p {
+    margin: -5px 0 5px;
+    line-height: 15px;
+    padding: 0;
+    font-size: 80%;
+  }
+  .product img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+.product.active {
+  opacity: 1;
+}
+  .product.active a {
+    color: #111; /*$color-title*/
   }
 .product-info h1 {
   font-size: 3em;
@@ -298,6 +297,24 @@ a.pure-button-primary:hover {
   color: white; /*$color-primary-inverted*/
 }
 
+.label-expanded {
+  display: none;
+}
+
+/*
+ * -- SMALL RESOLUTIONS (ONLY) MEDIA QUERIES --
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+@media (min-width: 48em) {
+  .label-expanded {
+    display: inline;
+  }
+  .label-short{
+    display: none;
+  }
+}
+
 /*
  * -- TABLET (AND UP) MEDIA QUERIES --
  * On tablets and other medium-sized devices, we want to customize some
@@ -324,12 +341,12 @@ a.pure-button-primary:hover {
     /* We decrease the width of the .splash, since we have more width
     to work with */
     .splash {
-        width: 50%;
+        width: 80%;
         height: 50%;
     }
 
     .splash-head {
-        font-size: 72px;
+        font-size: 48px;
     }
     .splash-subhead {
         font-size: 20px;
@@ -351,7 +368,7 @@ a.pure-button-primary:hover {
 @media (min-width: 78em) {
     /* We increase the header font size even more */
     .splash-head {
-        font-size: 96px;
+        font-size: 48px;
     }
     .splash-subhead {
         font-size: 24px;
