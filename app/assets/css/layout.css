@@ -239,7 +239,8 @@ a.pure-button-primary:hover {
   transition: .5s ease;
 }
 .product p {
-  margin: -15px 0 5px;
+  margin: -5px 0 5px;
+  line-height: 15px;
   padding: 0;
   font-size: 80%;
 }
@@ -256,9 +257,6 @@ a.pure-button-primary:hover {
     outline: none;
     transition: .5s ease;
   }
-.product-info { /* FIXME For the sake of demo only */
-  margin-top: 20px;
-}
 .product-info h1 {
   font-size: 3em;
   color: rgba(0,0,0,.7);
