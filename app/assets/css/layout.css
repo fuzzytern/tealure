@@ -33,25 +33,16 @@ html, button, input, select, textarea,
     font-family: "Maven Pro", serif;
 }
 
-.splash-head, h1, h2 {
+h1, h2 {
   font-family: "Cabin Sketch", serif;
+  color: white; /*$color-primary-inverted*/
 }
 
-header{
-  margin: 1em 1em 1.5em;
-}
-header > * {
-  margin: 0;
-  padding: 0;
-}
-
-h1,
-h2,
 h3,
 h4,
 h5,
-h6,
-label {
+h6
+{
     color: #111; /*$color-title*/
 }
 
@@ -107,7 +98,7 @@ a.pure-button-primary {
 }
 a.pure-button-primary:hover {
   background-image: none;
-  background-color: white;
+  background-color:  white; /*$color-primary-inverted*/
   color: #333; /*$color-prose*/
 }
 
@@ -178,12 +169,19 @@ a.pure-button-primary:hover {
     position: absolute;
     top: 0px; left: 0; bottom: 0; right: 0;
     text-align: center;
+    color: white; /*$color-primary-inverted*/
 }
+  .splash .social-media a {
+      color: white; /*$color-primary-inverted*/
+      opacity: .6;
+  }
+  .splash .social-media a:hover {
+      opacity: 1;
+  }
 
 /* This is the main heading that appears on the blue section */
 .splash-head {
     font-size: 24px;
-    color: white; /*$color-primary-inverted*/
     line-height: 1em;
 }
 
@@ -199,7 +197,7 @@ a.pure-button-primary:hover {
     width: 100%;
     min-height: 12%;
     z-index: 2;
-    background: white;
+    background: white; /*$color-primary-inverted*/
 }
 
 /* This is the class used for the main content headers (<h2>) */
