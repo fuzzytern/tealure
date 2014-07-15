@@ -1,5 +1,5 @@
 <div class="pure-g">
-  <div class='product pure-u-1-3 pure-u-lg-1-2' ng-class='{inactive: isSelected && selected != product}' ng-repeat="product in products">
+  <div class='product pure-u-1-3 pure-u-lg-1-2' ng-class='{inactive: isSelected() && (selected != product)}' ng-repeat="product in products">
     <a href="" ng-click='select(product);'>
       <img ng-src="assets/img/products/{{ product.slug }}.png" />
       <p class="is-center">{{ product.name }}</p>
