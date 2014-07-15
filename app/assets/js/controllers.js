@@ -56,7 +56,6 @@ angular.module('frontpage.controllers', [])
       $scope.selected.current_option = $scope.selected.options[0]
     };
 
-    /* Debug */
     $scope.isSelected = function() {
       return angular.isDefined($scope.selected);
     };

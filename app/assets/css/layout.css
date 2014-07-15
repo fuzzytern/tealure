@@ -197,7 +197,7 @@ a.pure-button-primary:hover {
     width: 100%;
     min-height: 12%;
     z-index: 2;
-    background: white; /*$color-primary-inverted*/
+    background: url("../img/lightpaperfibers.png") repeat;
 }
 
 /* This is the class used for the main content headers (<h2>) */
@@ -220,7 +220,6 @@ a.pure-button-primary:hover {
 }
 .product {
   transition: .5s ease;
-  opacity: .6;
 }
   .product a {
     outline: none;
@@ -237,8 +236,11 @@ a.pure-button-primary:hover {
     height: auto;
     display: block;
   }
-.product.active {
-  opacity: 1;
+.product.inactive {
+  opacity: .3;
+}
+.product.inactive:hover {
+  opacity: .6;
 }
   .product.active a {
     color: #111; /*$color-title*/
