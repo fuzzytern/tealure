@@ -16,14 +16,21 @@ module.exports = function(grunt) {
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
+      options: {
+        livereload: true
+      },
       js: {
-        files: ['<%= config.app %>/scripts/**/*.js'],
+        files: [ 'src/**/*.js,' ],
         tasks: ['newer:jshint:all'],
       },
-      jsTest: {
-        files: ['test/spec/**/*.js'],
-        tasks: ['newer:jshint:test', 'karma']
+      unit: {
+        files: [ 'src/**/*.spec.js' ],
+        tasks: ['newer:jshint:unit', 'karma']
       },
+      e2e: {
+        files: [ 'src/e2e/**/*.spec.js' ],
+        tasks: ['protractor:auto', 'newer:jshint:e2e']
+      }
     },
 
     // Make sure code styles are up to par and there are no obvious mistakes
@@ -34,15 +41,20 @@ module.exports = function(grunt) {
       },
       all: {
         src: [
-          'Gruntfile.js',
-          '<%= config.app %>/scripts/{,*/}*.js'
+         'src/**/*.js', 'Gruntfile.js'
         ]
       },
-      test: {
+      unit: {
         options: {
-          jshintrc: 'test/.jshintrc'
+          jshintrc: 'karma/.jshintrc'
         },
-        src: ['test/spec/{,*/}*.js']
+        src: ['src/**/*.spec.js']
+      },
+      e2e: {
+        options: {
+          jshintrc: 'e2e/.jshintrc'
+        },
+        src: ['e2e/**/*.spec.js']
       }
     },
 
@@ -52,7 +64,11 @@ module.exports = function(grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
+    },
+
+    protractor: {
+      files: ['src/e2e/**/*.js'],
+      tasks: ['protractor:auto']
     }
   });
 };
-
