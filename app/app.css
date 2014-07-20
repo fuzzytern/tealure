@@ -149,7 +149,7 @@ a.pure-button-primary:hover {
  */
 
 .splash-container {
-    background: url("../img/ladybug.jpg") no-repeat center;
+    background: url("img/ladybug.jpg") no-repeat center;
     background-size:cover;
     z-index: 1;
     overflow: hidden;
@@ -197,7 +197,7 @@ a.pure-button-primary:hover {
     width: 100%;
     min-height: 12%;
     z-index: 2;
-    background: url("../img/lightpaperfibers.png") repeat;
+    background: url("img/lightpaperfibers.png") repeat;
 }
 
 /* This is the class used for the main content headers (<h2>) */
