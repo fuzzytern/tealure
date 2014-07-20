@@ -1,3 +1,7 @@
+/* Thing to improve potentially
+ * set up testing coverage
+ */
+
 'use strict';
 
 module.exports = function(grunt) {
@@ -65,10 +69,5 @@ module.exports = function(grunt) {
         singleRun: true
       }
     },
-
-    protractor: {
-      files: ['src/e2e/**/*.js'],
-      tasks: ['protractor:auto']
-    }
   });
 };
