@@ -16,7 +16,17 @@ module.exports = function(grunt) {
   };
 
   grunt.initConfig({
-    config: appConfig, 
+    config: appConfig,
+
+    express: {
+      server: {
+        options: {
+          port: 9000,
+          hostname: 'localhost',
+          bases: '.'
+        }
+      }
+    },
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
@@ -24,15 +34,15 @@ module.exports = function(grunt) {
         livereload: true
       },
       js: {
-        files: [ 'src/**/*.js,' ],
-        tasks: ['newer:jshint:all'],
+        files: [ 'app/**/*.js,' ],
+        tasks: ['jshint:all'],
       },
       unit: {
-        files: [ 'src/**/*.spec.js' ],
-        tasks: ['newer:jshint:unit', 'karma']
+        files: [ 'app/**/*.spec.js' ],
+        tasks: ['jshint:unit', 'karma']
       },
       e2e: {
-        files: [ 'src/e2e/**/*.spec.js' ],
+        files: [ 'app/e2e/**/*.spec.js' ],
         tasks: ['protractor:auto', 'newer:jshint:e2e']
       }
     },
@@ -45,14 +55,14 @@ module.exports = function(grunt) {
       },
       all: {
         src: [
-         'src/**/*.js', 'Gruntfile.js'
+         'app/**/*.js', 'Gruntfile.js'
         ]
       },
       unit: {
         options: {
           jshintrc: 'karma/.jshintrc'
         },
-        src: ['src/**/*.spec.js']
+        src: ['app/**/*.spec.js']
       },
       e2e: {
         options: {
@@ -70,4 +80,6 @@ module.exports = function(grunt) {
       }
     },
   });
+
+  grunt.registerTask('default', ['express', 'express-keepalive']);
 };
