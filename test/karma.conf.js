@@ -6,18 +6,18 @@ module.exports = function(config){
     files : [
       'components/angular/angular.js',
       'components/angular-mocks/angular-mocks.js',
-      'js/**/*.js',
-      'js/**/*.spec.js',
+      '**/*.js',
+      '**/*.spec.js',
     ],
 
     autoWatch : true,
 
     frameworks: ['jasmine'],
 
-    browsers : ['PhantomJS'],
+    browsers : ['Chrome'],
 
     plugins : [
-      'karma-phantomjs-launcher',
+      'karma-chrome-launcher',
       'karma-jasmine'
     ],
 

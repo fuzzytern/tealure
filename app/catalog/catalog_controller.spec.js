@@ -9,9 +9,9 @@ describe('Catalog Controller', function(){
   }));
 
   describe('selecting a product for purchase', function(){
-    it('shows specifications for a product', inject(function($controller) {
+    xit('shows specifications for a product', inject(function($controller) {
     }));
-    it('adds a selected item to the cart', inject(function($controller) {
+    xit('adds a selected item to the cart', inject(function($controller) {
     }));
   });
 });

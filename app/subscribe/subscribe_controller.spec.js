@@ -1,15 +1,12 @@
 'use strict';
 
 describe('Subscribe Controller', function(){
-  beforeEach(module('app.catalog'));
+  beforeEach(module('subscribe'));
 
-  it('should bootstrap menu controller', inject(function($controller) {
-    var menuController = $controller('MenuController', { $scope: {} });
-    expect(menuController).toBeDefined();
+  it('should bootstrap subscribe controller', inject(function($controller) {
+    var subscribeController = $controller('SubscribeController', { $scope: {} });
+    expect(subscribeController).toBeDefined();
   }));
 
-  it('should bootstrap catalog controller', inject(function($controller) {
-    var catalogController = $controller('CatalogController', { $scope: {} });
-    expect(catalogController).toBeDefined();
-  }));
+  xit('should display message on subscribe');
 });
