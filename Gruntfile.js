@@ -1,4 +1,4 @@
-/* Thing to improve potentially
+/* Tthing to improve potentially
  * set up testing coverage
  */
 
@@ -33,17 +33,19 @@ module.exports = function(grunt) {
       options: {
         livereload: true
       },
-      js: {
-        files: [ 'app/**/*.js,' ],
-        tasks: ['jshint:all'],
-      },
+      //js: {
+      //  files: [ 'app/**/*.js', '!app/**/*.spec.js' ],
+      //  tasks: ['jshint:all'],
+      //},
       unit: {
         files: [ 'app/**/*.spec.js' ],
-        tasks: ['jshint:unit', 'karma']
+      //  tasks: ['jshint:unit', 'karma']
+        tasks: ['karma']
       },
       e2e: {
-        files: [ 'app/e2e/**/*.spec.js' ],
-        tasks: ['protractor:auto', 'newer:jshint:e2e']
+        files: [ 'test/e2e/**/*.spec.js' ],
+      //  tasks: ['protractor:auto', 'newer:jshint:e2e']
+        tasks: ['protractor:auto']
       }
     },
 
@@ -60,13 +62,13 @@ module.exports = function(grunt) {
       },
       unit: {
         options: {
-          jshintrc: 'karma/.jshintrc'
+          jshintrc: 'test/.jshintrc'
         },
         src: ['app/**/*.spec.js']
       },
       e2e: {
         options: {
-          jshintrc: 'e2e/.jshintrc'
+          jshintrc: 'test/.jshintrc'
         },
         src: ['e2e/**/*.spec.js']
       }
@@ -81,4 +83,5 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('default', ['express', 'express-keepalive']);
+  grunt.registerTask('test:unit', ['karma:unit']);
 };
