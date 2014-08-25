@@ -33,14 +33,10 @@ module.exports = function(grunt) {
       options: {
         livereload: true
       },
-      //js: {
-      //  files: [ 'app/**/*.js', '!app/**/*.spec.js' ],
-      //  tasks: ['jshint:all'],
-      //},
-      unit: {
-        files: [ 'app/**/*.spec.js' ],
-      //  tasks: ['jshint:unit', 'karma']
-        tasks: ['karma']
+      js: {
+        files: [ 'app/**/*.js' ],
+        //tasks: ['jshint:all'],
+        tasks: ['karma'],
       },
       e2e: {
         files: [ 'test/e2e/**/*.spec.js' ],
