@@ -3,6 +3,5 @@
 !.gitkeep
 package.json
 node_modules/
-app/components/
 tmp
 _site
