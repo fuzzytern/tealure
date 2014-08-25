@@ -25,9 +25,13 @@
 <div class="splash-container">
     <div class="splash">
       <h1 class="splash-head">In Ilam, the pristine highlands of Nepal, cultivating tea is an ancient art. We got astounded by the beverage's quality and wanted to share some with you, too.</h1>
-      <p>
-          <a href="#" class="pure-button pure-button-primary">Discover</a>
-          <a href="#" class="pure-button pure-button-primary">Subscribe</a>
+      <p ng-controller="SubscribeController">
+        <a href="#" class="pure-button pure-button-primary">Discover</a>
+        <a href="#" class="pure-button pure-button-primary"  ng-click="renderSubscribe()">Subscribe</a>
+        <p>scope: {{subscription}}</p>
+        <p ng-show="subscribeInfo">
+          Subscriptions are not available just yet.
+        </p>
       </p>
       <p class="social-media">
         <a href="http://facebook.com/tealure"><i class="fa fa-facebook-square fa-lg"></i></a>
@@ -81,5 +85,7 @@
 <script src="catalog/catalog.js"></script>
 <script src="catalog/catalog_controller.js"></script>
 <script src="catalog/catalog_directives.js"></script>
+<script src="subscribe/subscribe.js"></script>
+<script src="subscribe/subscribe_controller.js"></script>
 </body>
 </html>
